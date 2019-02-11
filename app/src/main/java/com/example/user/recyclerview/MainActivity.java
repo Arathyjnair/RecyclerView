@@ -29,7 +29,7 @@ private RecyclerView horizontal_recycler_view;
 
 private ArrayList<String> horizontal_list;
 
-//private HorizontalAdapter horizontalAdapter;
+private HorizontalAdapter horizontalAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +51,13 @@ private ArrayList<String> horizontal_list;
 
 
 
-//        horizontalAdapter=new HorizontalAdapter(horizontal_list);
-//
-//
-//        LinearLayoutManager horizontalLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-//        horizontal_recycler_view.setLayoutManager(horizontalLayoutManager);
-//
-//        horizontal_recycler_view.setAdapter(horizontalAdapter);
+        horizontalAdapter=new HorizontalAdapter(horizontal_list);
+
+
+        LinearLayoutManager horizontalLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        horizontal_recycler_view.setLayoutManager(horizontalLayoutManager);
+
+        horizontal_recycler_view.setAdapter(horizontalAdapter);
 
     }
     public  class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.MyViewHolder> {
